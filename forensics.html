@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyHub | Computer Forensics</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    background: #8e44ad;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.container {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.course-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.course-card h2 {
+    color: #8e44ad;
+    margin-top: 0;
+}
+
+.module {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+</style>
+</head>
+
+<body onload="protectDashboard()">
+
+<header>
+    <h1>Computer Forensics</h1>
+    <a href="dashboard.html">⬅ Back to Dashboard</a>
+</header>
+
+<div class="container">
+    <div class="course-card">
+        <h2>Course Overview</h2>
+        <p>
+            Explore digital investigations, file systems, and
+            techniques used to recover and analyze digital evidence.
+        </p>
+
+        <h3>Modules</h3>
+
+        <div class="module">🔍 Introduction to Digital Forensics</div>
+        <div class="module">💾 FAT & NTFS File Systems</div>
+        <div class="module">🧠 Memory & Disk Analysis</div>
+        <div class="module">📂 File Carving Techniques</div>
+        <div class="module">🛠 Forensic Tools & Methods</div>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

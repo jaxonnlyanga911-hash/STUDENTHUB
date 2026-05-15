@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyHub | Cyber Security</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    background: #c0392b;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.container {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.course-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.course-card h2 {
+    color: #c0392b;
+    margin-top: 0;
+}
+
+.module {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+</style>
+</head>
+
+<body onload="protectDashboard()">
+
+<header>
+    <h1>Cyber Security</h1>
+    <a href="dashboard.html">⬅ Back to Dashboard</a>
+</header>
+
+<div class="container">
+    <div class="course-card">
+        <h2>Course Overview</h2>
+        <p>
+            Understand cyber threats, defensive strategies, and
+            security best practices used in modern systems.
+        </p>
+
+        <h3>Modules</h3>
+
+        <div class="module">🛡 Introduction to Cyber Security</div>
+        <div class="module">🐛 Malware & Attacks</div>
+        <div class="module">🔥 Firewalls & IDS</div>
+        <div class="module">🔐 Cryptography Basics</div>
+        <div class="module">🚨 Incident Response</div>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

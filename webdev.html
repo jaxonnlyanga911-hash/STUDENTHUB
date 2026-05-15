@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub | Web Development</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        header {
+            background: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .course-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card h2 {
+            color: #27ae60;
+            margin-top: 0;
+        }
+
+        .module-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .module {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .module:hover {
+            background: #dcdfe1;
+            transform: translateX(5px);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="protectDashboard()">
+
+    <header>
+        <h1>Web Development</h1>
+        <a href="dashboard.html">⬅ Back to Dashboard</a>
+    </header>
+
+    <div class="container">
+        <div class="course-card">
+            <h2>Course Overview</h2>
+            <p>
+                Learn how to build modern, responsive websites using
+                HTML, CSS, and JavaScript from scratch.
+            </p>
+
+            <h3>Modules</h3>
+
+            <a href="https://www.w3schools.com/html/html_intro.asp" class="module-link">
+                <div class="module">🧱 HTML Fundamentals</div>
+            </a>
+            <div class="module">🎨 CSS Styling & Layouts</div>
+            <div class="module">⚙️ JavaScript Basics</div>
+            <div class="module">🖱 DOM Manipulation</div>
+            <div class="module">📱 Responsive Web Design</div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>

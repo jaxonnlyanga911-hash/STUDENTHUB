@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub | Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .logout {
+            background: #e74c3c;
+            border: none;
+            padding: 8px 15px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .line {
+            background: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .line :hover {
+            background: #524c4c;
+        }
+
+        .line span {
+            display: block;
+            height: 10px;
+            background: #27ae60;
+        }
+
+        /* .clickable {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .clickable:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }*/
+        .course-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .course-link .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .course-link .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body onload="protectDashboard(); loadUser();">
+
+    <header>
+        <h1>StudyHub Dashboard</h1>
+        <button class="logout" onclick="logout()">Logout</button>
+    </header>
+
+    <div class="container">
+        <h2 id="welcome"></h2>
+
+        <div class="courses">
+            <div class="courses">
+
+                <a href="networking.html" class="course-link">
+                    <div class="card">
+                        <h3>Networking Fundamentals </h3>
+                        <p>Learn TCP/IP, DNS, Routing</p>
+                        <div class="line"><span style="width: 100%"></span></div>
+                    </div>
+                </a>
+
+                <a href="webdev.html" class="course-link">
+                    <div class="card">
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript</p>
+                        <div class="line"><span style="width: 100%"></span></div>
+                    </div>
+                </a>
+
+                <a href="forensics.html" class="course-link">
+                    <div class="card">
+                        <h3>Computer Forensics</h3>
+                        <p>FAT, NTFS, Disk Analysis</p>
+                        <div class="line"><span style="width: 100%"></span></div>
+                    </div>
+                </a>
+
+                <a href="cybersecurity.html" class="course-link">
+                    <div class="card">
+                        <h3>Cyber Security</h3>
+                        <p>Threats & Defense</p>
+                        <div class="line"><span style="width: 100%"></span></div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+        <script src="auth.js"></script>
+        <script>
+            function loadUser() {
+                const user = JSON.parse(localStorage.getItem("studyhubUser"));
+                document.getElementById("welcome").innerText =
+                    "Welcome, " + user.username + " 🎓";
+            }
+            function openCourse(page) {
+                window.location.href = page;
+            }
+        </script>
+
+
+</body>
+
+</html>
